@@ -132,11 +132,12 @@ class DecisionBoundaryDisplay:
         if ax is None:
             _, ax = plt.subplots()
 
-        top = cm.get_cmap('Oranges_r', 128)
-        bottom = cm.get_cmap('Blues', 128)
-        newcolors = np.vstack((top(np.linspace(0, 1, 128)),
-                            bottom(np.linspace(0, 1, 128))))
-        cmap = ListedColormap(newcolors, name='OrangeBlue')
+        top = cm.get_cmap("Oranges_r", 128)
+        bottom = cm.get_cmap("Blues", 128)
+        newcolors = np.vstack(
+            (top(np.linspace(0, 1, 128)), bottom(np.linspace(0, 1, 128)))
+        )
+        cmap = ListedColormap(newcolors, name="OrangeBlue")
         kwargs["cmap"] = kwargs.get("cmap", cmap)
 
         plot_func = getattr(ax, plot_method)

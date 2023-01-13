@@ -47,7 +47,12 @@ def plot_cv_indices(cv, X, y, groups=None, ax=None, lw=10):
         yticks = np.arange(n_splits + 2) + 0.5
         yticklabels.append("group")
         ax.scatter(
-            range(len(X)), [ii + 2.5] * len(X), c=groups, marker="_", lw=lw, cmap=cmap_data
+            range(len(X)),
+            [ii + 2.5] * len(X),
+            c=groups,
+            marker="_",
+            lw=lw,
+            cmap=cmap_data,
         )
 
     # Formatting
